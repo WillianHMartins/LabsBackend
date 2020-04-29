@@ -7,9 +7,9 @@ const SolicitacaoSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
-    divida: {
+    emprestimo: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Divida'
+        ref: 'Emprestimo'
     }
 })
 
