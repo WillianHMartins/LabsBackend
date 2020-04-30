@@ -4,10 +4,7 @@ const EmprestimoSchema = new mongoose.Schema(
 	{
 		thumbnail: String,
 		name: String,
-		debtReason: String,
-		debtDate: Date,
 		types: [String],
-		price: Number,
 		rateInterest: String,
 		user: {
 			type: mongoose.Schema.Types.ObjectId,

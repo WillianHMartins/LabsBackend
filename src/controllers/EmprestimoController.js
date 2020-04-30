@@ -13,7 +13,7 @@ module.exports = {
     
     async store(req, res) {
         const { filename } = req.file;
-        const { name, debtReason, debtDate, rateInterest, types, price } = req.body;
+        const { name, rateInterest, types } = req.body;
         const { user_id } = req.headers;
 
         const user = await User.findById(user_id);
@@ -28,11 +28,8 @@ module.exports = {
             user: user_id,
             thumbnail: filename,
             name,
-            debtReason,
-            debtDate,
             rateInterest,
             types: types.split(',').map(type => type.trim()),
-            price
         })
 
         return res.json(emprestimo)
